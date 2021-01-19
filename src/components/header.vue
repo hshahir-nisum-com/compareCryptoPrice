@@ -8,6 +8,9 @@
       </p>
     </div>
   </div>
+
+
+  
   <CryptoList />
 </template>
 

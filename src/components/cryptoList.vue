@@ -1,6 +1,7 @@
 <template>
+<div class=" mx-auto text-center px-4 table-fixed  mt-2 lg:col-span-12 border-collapse  border-green-800" >
   <table
-    class="container mx-auto text-center px-4 table-fixed shadow-md mt-2 lg:col-span-12 border-collapse border border-green-800"
+    class="shadow-md "
   >
     <thead>
       <tr>
@@ -27,6 +28,9 @@
       </tr>
     </tbody>
   </table>
+    <button class="mt-5">button</button>
+    </div>
+
 </template>
 
 <script>
@@ -34,21 +38,15 @@ import { mapActions } from "vuex";
 import { mapState } from "vuex";
 export default {
   name: "CryptoList",
-  data() {
-    return {
-      coinData: [],
-    };
-  },
-
+  
   methods: {
-    ...mapActions("fromApi",["getData"]),
-    
-    
+    ...mapActions("fromApi", ["getData"]),
   },
-  async created (){
-    await this.getData()
+  async created() {
+    await this.getData();
   },
-  computed:{ 
-    ...mapState(['fromApi'])},
+  computed: {
+    ...mapState(["fromApi"]),
+  },
 };
 </script>

@@ -1,7 +1,5 @@
 <template>
-  <div
-    class=" grid grid-cols-12 gap-4"
-  >
+  <div class="grid grid-cols-12 gap-4">
     <Header />
   </div>
 </template>
