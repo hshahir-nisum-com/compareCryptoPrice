@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="data in coins" :key="data">
+      <tr v-for="data in fromApi.coins" :key="data">
         <td class="border hover:bg-indigo-50 border-green-600">
           {{ data.cmc_rank }}
         </td>
@@ -41,13 +41,12 @@ export default {
   },
 
   methods: {
-    ...mapActions(["fromApi/getData"]),
+    ...mapActions("fromApi",["getData"]),
+    
     
   },
-  async update() {
-    await this.getData();
-    
-    console.log(this.fromApi)
+  async created (){
+    await this.getData()
   },
   computed:{ 
     ...mapState(['fromApi'])},

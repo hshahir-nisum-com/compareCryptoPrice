@@ -9,7 +9,7 @@ export const state = {
 /// this is our reducer
 export const mutations = {
   ADD_DATA(state, Payload) {
-    state.data = Payload;
+    state.coins = Payload;
   },
 };
 
