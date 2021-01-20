@@ -15,6 +15,7 @@ export const mutations = {
 
 export const actions = {
   getData({ commit }) {
+    console.log("clicked")
     GetData()
       .then((data) => {
         console.log("from :", data);
